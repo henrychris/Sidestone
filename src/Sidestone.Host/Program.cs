@@ -1,6 +1,6 @@
+using System.Reflection;
 using Sidestone.Host.Configuration;
 using Sidestone.Host.Data;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 var environment = builder.Environment.EnvironmentName;
@@ -34,7 +34,7 @@ app.RegisterSwagger();
 app.RegisterMiddleware();
 
 // seed db here if needed
-// await app.ApplyMigrationsAsync<DataContext>();
+await app.ApplyMigrationsAsync<DataContext>();
 app.Run();
 
 // this is here for integration tests
