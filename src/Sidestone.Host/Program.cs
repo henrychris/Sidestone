@@ -25,6 +25,7 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.Get
 
 // todo: setup identity
 // todo: setup authentication
+builder.Services.AddIdentity();
 builder.Services.RegisterServices();
 builder.Services.SetupJsonOptions();
 
