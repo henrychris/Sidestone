@@ -1,4 +1,5 @@
 using System.Reflection;
+using FluentValidation;
 using Sidestone.Host.Configuration;
 using Sidestone.Host.Data;
 
@@ -22,6 +23,7 @@ builder.Services.SetupControllers();
 builder.Services.AddSwagger();
 builder.Services.SetupFilters();
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
 // todo: setup identity
 // todo: setup authentication
