@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Sidestone.Host.Data.Configurations;
+using Sidestone.Host.Data.Converters;
 using Sidestone.Host.Data.Entities;
 
 namespace Sidestone.Host.Data
@@ -25,8 +26,22 @@ namespace Sidestone.Host.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            AddUtcConverterForDateTimeProps(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
+        }
+
+        private static void AddUtcConverterForDateTimeProps(ModelBuilder modelBuilder)
+        {
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                var dateTimeProperties = entityType.GetProperties().Where(p => p.ClrType == typeof(DateTime) || p.ClrType == typeof(DateTime?));
+
+                foreach (var property in dateTimeProperties)
+                {
+                    property.SetValueConverter(new DateTimeToUtcConverter());
+                }
+            }
         }
 
         public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken token = default)
