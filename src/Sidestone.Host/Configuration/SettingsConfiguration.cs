@@ -26,6 +26,7 @@ namespace Sidestone.Host.Configuration
         public static void SetupConfigFiles(this IServiceCollection services)
         {
             ConfigureSettings<DatabaseSettings>(services);
+            ConfigureSettings<JwtSettings>(services);
             Console.WriteLine("Secrets have been bound to classes.");
         }
     }
