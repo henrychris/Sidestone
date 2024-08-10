@@ -6,7 +6,7 @@ using Sidestone.Host.Data.Entities;
 
 namespace Sidestone.Host.Data
 {
-    public class DataContext : IdentityDbContext
+    public class DataContext : IdentityDbContext<ApplicationUser>
     {
         public DataContext() { }
 
