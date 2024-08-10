@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sidestone.Host", "src\Sidestone.Host\Sidestone.Host.csproj", "{FE3E2557-B5AF-4FF6-B654-BA65B4FF697D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sidestone.Tests", "tests\Sidestone.Tests\Sidestone.Tests.csproj", "{6C4C4740-504E-4EDF-BB3A-5B1E0D4F283A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2DE866A6-C161-43BB-8BC4-36F64FA369F0}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE3E2557-B5AF-4FF6-B654-BA65B4FF697D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3E2557-B5AF-4FF6-B654-BA65B4FF697D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE3E2557-B5AF-4FF6-B654-BA65B4FF697D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE3E2557-B5AF-4FF6-B654-BA65B4FF697D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C4C4740-504E-4EDF-BB3A-5B1E0D4F283A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C4C4740-504E-4EDF-BB3A-5B1E0D4F283A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C4C4740-504E-4EDF-BB3A-5B1E0D4F283A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C4C4740-504E-4EDF-BB3A-5B1E0D4F283A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91430508-9858-41FD-9F2B-4B0B43D27C8D}
+	EndGlobalSection
+EndGlobal
