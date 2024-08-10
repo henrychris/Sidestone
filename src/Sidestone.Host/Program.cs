@@ -28,6 +28,7 @@ builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 // todo: setup identity
 // todo: setup authentication
 builder.Services.AddIdentity();
+builder.Services.SetupAuth(builder.Configuration);
 builder.Services.RegisterServices();
 builder.Services.SetupJsonOptions();
 
